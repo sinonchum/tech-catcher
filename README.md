@@ -1,202 +1,166 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express-4.17-000000?style=flat&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/license-MIT-green?style=flat" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-Scrapling-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-Cache-003B57?style=flat-square&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
 </p>
 
 <h1 align="center">TechCatcher</h1>
 
 <p align="center">
-  <strong>Patent intelligence for energy technology — from search to signal.</strong><br>
-  Dual-source patent analysis (EPO OPS + Google Patents) with AI-scored competitor mapping, ecosystem visualization, and gap analysis.
+  Patent search and competitive intelligence for the energy industry.<br>
+  EPO OPS + Google Patents. One dashboard. No noise.
 </p>
 
 <p align="center">
-  <a href="#-features">Features</a> ·
-  <a href="#-screenshots">Screenshots</a> ·
-  <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-architecture">Architecture</a> ·
-  <a href="#-api-reference">API</a>
+  <a href="#what-it-does">What It Does</a> ·
+  <a href="#screenshots">Screenshots</a> ·
+  <a href="#get-started">Get Started</a> ·
+  <a href="#how-it-works">How It Works</a> ·
+  <a href="#api">API</a>
 </p>
 
 ---
 
-## Why TechCatcher
+## What it does
 
-Patent databases are powerful. They're also slow to navigate, rate-limited, and full of noise.
+Type any energy topic — green hydrogen, offshore wind, sodium-ion battery — and TechCatcher searches patent databases, scores the results, and maps who's doing what.
 
-TechCatcher takes the pain out of energy patent research. Type a topic, get suggested search strategies, and pull results from **two independent data sources** — the official EPO OPS API and Google Patents (via anti-bot scraping). Results get scored, ranked, and mapped across four dimensions: technical fit, innovation strength, commercialization readiness, and global coverage.
+It pulls from two sources:
 
-It's built for teams that need to move faster than the EPO website allows.
+- **EPO OPS** — official European Patent Office API. Structured CQL queries, IPC classification, precise filtering. Rate-limited (4 req / 2.5s).
+- **Google Patents** — scraped via [Scrapling](https://github.com/niespodd/scrapling) with anti-bot bypass. No API quota. Good for broad sweeps.
 
-## ✦ Features
+Toggle between them. Same UI, different data.
 
-<table>
-<tr>
-<td width="50%">
+**What you get:**
 
-### 🔍 Smart Search
-Enter any energy topic — "green hydrogen", "sodium-ion battery", "offshore wind" — and get **5 auto-generated search angles**. The system expands your keyword into precise CQL queries (EPO) and keyword combinations (Google Patents).
+| Feature | What it tells you |
+|---------|-------------------|
+| Smart Search | Expands your topic into 5 search strategies. Click one, get results. |
+| Innovation Score | Every patent scored on tech specificity, citation density, commercial signals. |
+| Gap Analysis | Compare your portfolio against a competitor. See overlaps and blind spots. |
+| Ecosystem Map | Enter a company — see who they co-file patents with, which inventors they work with. |
+| Inventor Ranking | Who's publishing the most in a domain. Useful for hiring or licensing. |
+| Partner Pipeline | Top candidates ranked, with suggested actions (BD call, M&A watch, deep dive). |
 
-</td>
-<td width="50%">
-
-### ⚡ Dual Data Sources
-**EPO OPS** — structured CQL with IPC classification, ideal for precise filtering. **Google Patents** — large-scale scanning via Scrapling's StealthyFetcher, bypassing anti-bot systems. One toggle switches between them.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📊 Innovation Scoring
-Every patent gets an innovation score based on citation density, technology specificity, and commercial indicators. Top candidates surface with actionable recommendations: *Initiate BD Call*, *Monitor M&A Potential*, *Schedule Deep Dive*.
-
-</td>
-<td width="50%">
-
-### 🗺️ Gap Analysis
-Compare your portfolio against any competitor. See shared capabilities side-by-side with their unique strengths. The complementarity score tells you at a glance whether a partnership or acquisition makes sense.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🌐 Ecosystem Mapping
-Enter a company name, get their co-applicant network. Who are they filing with? Which inventors are moving between companies? The relationship graph reveals partnership dynamics the raw patents won't.
-
-</td>
-<td width="50%">
-
-### 👤 Inventor Intelligence
-Rank inventors by patent count, influence, and affiliation. Spot the key researchers in any domain — useful for recruitment, licensing conversations, or competitive monitoring.
-
-</td>
-</tr>
-</table>
-
-## 📸 Screenshots
+## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.png" width="90%" alt="Dashboard with patent analysis"/>
-  <br><em>Dashboard — real-time patent scoring with radar comparison and partner pipeline</em>
+  <img src="docs/screenshots/dashboard.png" width="880" alt="Dashboard showing patent scoring, radar chart, and partner pipeline"/>
+  <br><em>Dashboard — innovation ranking, radar comparison, partner pipeline</em>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/search.png" width="90%" alt="Smart search with suggestions"/>
-  <br><em>Smart search — topic expansion with clickable CQL/keyword suggestions</em>
+  <img src="docs/screenshots/search.png" width="880" alt="Smart search with auto-generated CQL suggestions"/>
+  <br><em>Smart search — topic expansion with clickable search strategies</em>
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/gap.png" width="90%" alt="Gap analysis"/>
-  <br><em>Gap analysis — competitor complementarity with technology overlap mapping</em>
+  <img src="docs/screenshots/gap-analysis.png" width="880" alt="Gap analysis comparing tech portfolios"/>
+  <br><em>Gap analysis — competitor complementarity and technology overlap</em>
 </p>
 
-## 🚀 Quick Start
+<p align="center">
+  <img src="docs/screenshots/ecosystem.png" width="880" alt="Ecosystem mapping showing co-applicant networks"/>
+  <br><em>Ecosystem — co-applicant network and technology focus areas</em>
+</p>
+
+## Get started
 
 ```bash
-# 1. Clone
 git clone https://github.com/sinonchum/tech-catcher.git
 cd tech-catcher
+```
 
-# 2. Frontend
+**Frontend** (React + Vite):
+```bash
 npm install
-npm run dev                  # → http://localhost:3000
+npm run dev              # http://localhost:3000
+```
 
-# 3. Backend
+**Backend** (Express):
+```bash
 cd server
 cp config.example.json config.json
-# Edit config.json with your EPO credentials
+# Put your EPO credentials in config.json, or leave blank to skip EPO
 npm install
-node index.js                # → http://localhost:3001
+node index.js            # http://localhost:3001
+```
 
-# 4. Google Patents scraper (optional)
+**Google Patents scraper** (optional, needed for Google data source):
+```bash
 pip install scrapling
 ```
 
-**EPO OPS credentials** — register at [developers.epo.org](https://developers.epo.org/). Free tier supports 4 requests/2.5s.
+EPO credentials are free — register at [developers.epo.org](https://developers.epo.org/). Google Patents needs nothing.
 
-Google Patents works out of the box — no API key needed. The Scrapling scraper handles Cloudflare and bot detection automatically.
-
-## 🏗 Architecture
+## How it works
 
 ```
-┌─────────────────────────────────────────────────┐
-│              React 18 + Tailwind 3              │
-│         Recharts · Lucide · Vite 5 HMR          │
-│                   Port 3000                      │
-└──────────────────────┬──────────────────────────┘
-                       │ REST / JSON
-┌──────────────────────▼──────────────────────────┐
-│              Express (ESM) · Port 3001           │
-│  ┌───────────────┐  ┌────────────────────────┐  │
-│  │ SQLite Cache  │  │ Rate Limiter           │  │
-│  │ 24h TTL, WAL  │  │ 2.5s delay, burst=4    │  │
-│  └───────────────┘  └────────────────────────┘  │
-├─────────────────────────────────────────────────┤
-│  ┌─────────────────┐  ┌──────────────────────┐  │
-│  │ EPO OPS         │  │ Google Patents       │  │
-│  │ OAuth2 + CQL    │  │ Scrapling + Chromium │  │
-│  │ Structured      │  │ Anti-bot bypass      │  │
-│  │ Precise         │  │ Large-scale          │  │
-│  └─────────────────┘  └──────────────────────┘  │
-└─────────────────────────────────────────────────┘
+Browser ──→ Vite (3000) ──→ Express (3001) ──→ EPO OPS (OAuth2 + CQL)
+                              │                └→ Google Patents (Scrapling + Chromium)
+                              │
+                              └→ SQLite (local cache, 24h TTL)
 ```
 
-| Layer | Stack |
-|-------|-------|
-| Frontend | React 18, Tailwind CSS 3, Recharts, Lucide icons |
-| Backend | Express (ESM), better-sqlite3, fast-xml-parser |
-| Scraping | Scrapling StealthyFetcher, regex DOM parser |
-| Build | Vite 5, PostCSS, Autoprefixer |
+**Frontend:** React 18, Tailwind CSS, Recharts for charts, Lucide for icons.
 
-## 📡 API Reference
+**Backend:** Express in ESM mode. SQLite via better-sqlite3 for local caching — avoids hammering EPO's rate limiter on repeat queries.
+
+**Scraping:** Python script using Scrapling's StealthyFetcher. Launches headless Chromium, handles Cloudflare/bot detection, parses patent results from Google Patents HTML. Regex-based DOM parsing since Google Patents uses web components.
+
+**Rate limiting:** EPO's free tier is 4 requests per 2.5 seconds. The backend enforces this with configurable delay, burst protection (4 req → 10s pause), and exponential backoff on RobotDetected errors. Google Patents has no such limit.
+
+## API
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/suggest` | `POST` | Expand topic → 5 search angle suggestions |
-| `/api/patents/search` | `GET` | EPO OPS patent search (CQL) |
-| `/api/patents/google` | `GET` | Google Patents scraper (Scrapling) |
-| `/api/analysis/gap` | `GET` | Competitor gap analysis |
-| `/api/analysis/ecosystem` | `GET` | Co-applicant + inventor network |
-| `/api/analysis/inventors` | `GET` | Inventor leaderboard |
-| `/api/settings` | `GET` / `PUT` | Configuration management |
-| `/api/db/stats` | `GET` | Cache hit rates, API call counts |
-| `/api/export/json` | `GET` | Export patents as JSON |
-| `/api/export/csv` | `GET` | Export patents as CSV |
+| `/api/suggest` | POST | Topic → search angle expansion (local, no API call) |
+| `/api/patents/search` | GET | EPO OPS patent search (CQL) |
+| `/api/patents/google` | GET | Google Patents via Scrapling |
+| `/api/analysis/gap` | GET | Competitor gap analysis |
+| `/api/analysis/ecosystem` | GET | Co-applicant and inventor network |
+| `/api/analysis/inventors` | GET | Inventor leaderboard by domain |
+| `/api/settings` | GET/PUT | Configuration (credentials, rate limits) |
+| `/api/db/stats` | GET | Cache stats, API call counts |
+| `/api/export/json` | GET | Export cached patents |
+| `/api/export/csv` | GET | Export cached patents |
 
-## ⚙️ Rate Limiting & Caching
+## Configuration
 
-EPO OPS enforces strict rate limits. TechCatcher handles this transparently:
+```json
+{
+  "epo": {
+    "consumerKey": "YOUR_KEY",
+    "consumerSecret": "YOUR_SECRET"
+  },
+  "rateLimit": {
+    "requestDelayMs": 2500,
+    "burstLimit": 4,
+    "burstPauseMs": 10000
+  }
+}
+```
 
-- **Request delay**: configurable, default 2500ms between calls
-- **Burst protection**: max 4 requests, then 10s cooldown
-- **Exponential backoff**: retries with increasing delay on `RobotDetected`
-- **SQLite cache**: results cached for 24h, served instantly on repeat queries
+Or set `EPO_CONSUMER_KEY` and `EPO_CONSUMER_SECRET` as environment variables. Or skip EPO entirely and use only Google Patents.
 
-Google Patents has no API quota — the Scrapling scraper handles Cloudflare, Datadome, and custom bot detection via headless Chromium with fingerprint randomization.
+## Who this is for
 
-## 🔒 Environment Variables
+- **BD teams** scouting energy tech partnerships
+- **Patent analysts** doing landscape reviews
+- **VCs** evaluating deep tech startups in batteries, hydrogen, solar, wind, nuclear
+- **R&D leads** monitoring competitor IP portfolios
+- **Licensing professionals** finding inventors and assignees
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `EPO_CONSUMER_KEY` | Yes (for EPO) | Your EPO OPS consumer key |
-| `EPO_CONSUMER_SECRET` | Yes (for EPO) | Your EPO OPS consumer secret |
-| `PYTHON` | No | Python binary path (default: `python3`) |
+## License
 
-Or configure via the Settings page in the UI, or edit `server/config.json` directly.
-
-## 📄 License
-
-MIT — do whatever you want.
+MIT
 
 ---
 
 <p align="center">
-  Built with <a href="https://developers.epo.org/">EPO OPS</a> and <a href="https://github.com/niespodd/scrapling">Scrapling</a>.<br>
-  Not affiliated with the European Patent Office.
+  Data sources: <a href="https://developers.epo.org/">EPO OPS</a> · <a href="https://patents.google.com/">Google Patents</a> · <a href="https://github.com/niespodd/scrapling">Scrapling</a><br>
+  Not affiliated with the European Patent Office or Google.
 </p>
