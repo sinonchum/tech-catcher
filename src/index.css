@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 font-sans antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    @apply scroll-smooth;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-emerald-100 text-emerald-900;
+  }
+}
+
+/* Chart tooltip polish */
+.recharts-tooltip-wrapper {
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.06));
+}
+
+/* Subtle transitions */
+.recharts-area-area,
+.recharts-bar-rectangle {
+  transition: opacity 0.2s ease;
+}
+
+/* Score bar animation */
+@keyframes fillBar {
+  from { width: 0; }
+}
+.score-bar {
+  animation: fillBar 0.6s ease-out forwards;
+}
+
+/* Hide scrollbar on sidebar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

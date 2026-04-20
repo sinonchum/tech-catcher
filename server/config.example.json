@@ -1,0 +1,20 @@
+{
+  "user": {
+    "name": "Your Name",
+    "role": "Your Role"
+  },
+  "epo": {
+    "consumerKey": "YOUR_EPO_CONSUMER_KEY",
+    "consumerSecret": "YOUR_EPO_CONSUMER_SECRET",
+    "authUrl": "https://ops.epo.org/3.2/auth/accesstoken",
+    "searchUrl": "https://ops.epo.org/3.2/rest-services/published-data/search",
+    "publishedUrl": "https://ops.epo.org/3.2/rest-services/published-data/publication"
+  },
+  "rateLimit": {
+    "requestDelayMs": 2500,
+    "maxRetries": 3,
+    "backoffMultiplier": 2,
+    "burstLimit": 4,
+    "burstPauseMs": 10000
+  }
+}
