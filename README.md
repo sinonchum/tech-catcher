@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-Scrapling-3776AB?style=flat-square&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/SQLite-Cache-003B57?style=flat-square&logo=sqlite&logoColor=white" />
-  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/license-AGPL--3.0-green?style=flat-square" />
 </p>
 
 <h1 align="center">TechCatcher</h1>
@@ -156,7 +156,7 @@ Or set `EPO_CONSUMER_KEY` and `EPO_CONSUMER_SECRET` as environment variables. Or
 
 ## License
 
-MIT
+[AGPL-3.0](LICENSE) — if you run a modified version as a service, you must make the source available to users.
 
 ---
 
